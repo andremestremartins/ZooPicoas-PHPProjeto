@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    --bg-header: #050505;
+    --bg-header-scorlled: #050505;
     --primary: #e47b20;
     --primary-hover: #cb6812;
     --primary-light: rgba(228, 123, 32, 0.1);
@@ -26,13 +26,13 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #f4f5f7;
+    background-color: #0054fc;
 }
 
-.site-header {
+header {
     width: 100%;
     height: 84px;
-    background: var(--bg-header);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,6 +41,7 @@ body {
     z-index: 1000;
     color: var(--text-light);
 }
+
 
 .logo-container img {
     width: 140px;
@@ -281,6 +282,7 @@ body {
 }
 /*hero*/
 #hero{
+    top: 0;
     background-image: url(../assets/images/hero.png);
     width: 100%;
     height: 100vh;
