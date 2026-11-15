@@ -1,28 +1,13 @@
-const dropdowns = document.querySelectorAll('.dropdown-wrapper');
 
-function closeAllDropdowns() {
-    dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
-}
+const header = document.querySelector('header');
+const logo = document.querySelector('.logo-container img');
 
-dropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector('.dropdown-toggle');
+window.addEventListener('scroll', () => {
+    const isScrolled = window.scrollY > 50;
 
-    button.addEventListener('click', event => {
-        event.stopPropagation();
-        const isOpen = dropdown.classList.contains('active');
-        
-        closeAllDropdowns();
+    header.classList.toggle('scrolled', isScrolled);
 
-        if (!isOpen) {
-            dropdown.classList.add('active');
-        }
-    });
+    logo.src = isScrolled
+        ? './assets/images/logos/logoLaranja.png'
+        : './assets/images/logos/logoBranco.png';
 });
-
-document.addEventListener('click', closeAllDropdowns);
-
-document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeAllDropdowns();
-});
-
-
