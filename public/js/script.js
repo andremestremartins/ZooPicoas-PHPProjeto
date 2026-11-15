@@ -24,3 +24,5 @@ document.addEventListener('click', closeAllDropdowns);
 document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeAllDropdowns();
 });
+
+
