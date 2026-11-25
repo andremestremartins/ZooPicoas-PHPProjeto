@@ -3,7 +3,7 @@
 $pageTitle = "ZooPicoas";
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,7 @@ $pageTitle = "ZooPicoas";
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
-
-<header>
+<header id="header">
     <div class="logo-container">
         <a href="index.php">
             <img src="./assets/images/logos/logoBranco.png" alt="Zoo de Picoas">
@@ -120,9 +119,20 @@ $pageTitle = "ZooPicoas";
         <a href="login.php" class="profile-btn" aria-label="A minha conta">
             <i class="fa-regular fa-user"></i>
         </a>
+        <button onclick="PesquiseMode(true)" class="profile-btn" aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
 
         <a href="bilhetes.php" class="buy-btn">
             Comprar bilhetes <i class="fa-solid fa-arrow-right"></i>
         </a>
     </div>
+</header>
+<header class="pesquiseMode none">
+        <input type="text" placeholder="Pesquise o seu Animal...">
+        <div class="btns">
+            <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onclick="PesquiseMode(false)" class="btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
 </header>
